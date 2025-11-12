@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Air Pollution Awareness</title>
+    <meta
+      name="description"
+      content="Visual documentation of air pollution effects, sources, and solutions through powerful imagery"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-wind"></i> Air Pollution
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Learn More</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQ's.html">FAQs</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="profile.html">About</a>
+            </li> -->
+          </ul>
+          <!-- <a href="profile.html" class="btn btn-primary ms-3">Get Involved</a> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="display-3 fw-bold mb-3">Visual Stories</h1>
+          <p class="lead">
+            Documenting the reality of air pollution and the path toward cleaner
+            air
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="pollution">
+            <div class="gallery-image">
+              <img
+                src="./images/gallery-industrial-pollution.jpg"
+                alt="Industrial air pollution from factory smokestacks"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <!-- <h3>Industrial Emissions</h3>
+                  <p>
+                    Factory smokestacks releasing harmful pollutants into the
+                    atmosphere
+                  </p> -->
+                  <button class="view-btn" onclick="openModal(0)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pollution">
+            <div class="gallery-image">
+              <img
+                src="./images/gallery-traffic-pollution.jpg"
+                alt="Traffic congestion causing vehicular air pollution"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <!-- <h3>Vehicular Pollution</h3>
+                  <p>
+                    Heavy traffic contributing to urban air quality degradation
+                  </p> -->
+                  <button class="view-btn" onclick="openModal(1)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pollution">
+            <div class="gallery-image">
+              <img
+                src="./images/gallery-forest-fire.jpg"
+                alt="Forest fire smoke causing severe air pollution"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <!-- <h3>Wildfire Impact</h3>
+                  <p>
+                    Forest fires releasing massive amounts of smoke and
+                    particulates
+                  </p> -->
+                  <button class="view-btn" onclick="openModal(2)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="solution">
+            <div class="gallery-image">
+              <img
+                src="./images/gallery-renewable-energy.jpg"
+                alt="Renewable energy solutions with wind and solar power"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <!-- <h3>Clean Energy Future</h3>
+                  <p>Renewable energy solutions for reducing air pollution</p> -->
+                  <button class="view-btn" onclick="openModal(3)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="awareness">
+            <div class="gallery-image">
+              <img
+                src="./images/gallery-masks-pollution.jpg"
+                alt="People wearing masks to protect against air pollution"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <!-- <h3>Health Protection</h3>
+                  <p>Communities adapting to poor air quality conditions</p> -->
+                  <button class="view-btn" onclick="openModal(4)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="solution">
+            <div class="gallery-image">
+              <img
+                src="./images/gallery-green-city.jpg"
+                alt="Sustainable green city with clean air and urban forestry"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <!-- <h3>Green Urban Spaces</h3>
+                  <p>
+                    Sustainable cities designed for clean air and healthy living
+                  </p> -->
+                  <button class="view-btn" onclick="openModal(5)">
+                    <i class="fas fa-search-plus"></i> View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Full View -->
+    <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+      <span class="close-modal">&times;</span>
+      <button
+        class="modal-nav prev"
+        onclick="event.stopPropagation(); prevImage()"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        class="modal-nav next"
+        onclick="event.stopPropagation(); nextImage()"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <img id="modalImage" src="" alt="" />
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-12">
+            <h2 class="mb-4"><i class="fas fa-wind"></i> AirCare</h2>
+            <p>
+              Working towards a future with clean air for all. Join us in the
+              fight against air pollution and climate change.
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <h3 class="mb-4">Quick Links</h3>
+            <ul class="list-unstyled d-flex flex-wrap gap-4">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Learn More</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="FAQ's.html">FAQs</a></li>
+              <!-- <li><a href="profile.html">About</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="foot">
+      <div class="container">
+        <p class="mb-0 text-white">© 2024 AirCare. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const images = [
+        {
+          src: "./images/gallery-industrial-pollution.jpg",
+          //   title: "Industrial Emissions",
+          //   description:
+          //     "Factory smokestacks releasing harmful pollutants into the atmosphere, a major contributor to air quality degradation.",
+        },
+        {
+          src: "./images/gallery-traffic-pollution.jpg",
+          //   title: "Vehicular Pollution",
+          //   description:
+          //     "Heavy traffic contributing to urban air quality degradation with exhaust emissions and particulate matter.",
+        },
+        {
+          src: "./images/gallery-forest-fire.jpg",
+          //   title: "Wildfire Impact",
+          //   description:
+          //     "Forest fires releasing massive amounts of smoke and particulates, affecting air quality across vast regions.",
+        },
+        {
+          src: "./images/gallery-renewable-energy.jpg",
+          //   title: "Clean Energy Future",
+          //   description:
+          //     "Renewable energy solutions like wind and solar power offer sustainable alternatives to fossil fuels.",
+        },
+        {
+          src: "./images/gallery-masks-pollution.jpg",
+          //   title: "Health Protection",
+          //   description:
+          //     "Communities adapting to poor air quality conditions by using protective masks and taking precautions.",
+        },
+        {
+          src: "./images/gallery-green-city.jpg",
+          //   title: "Green Urban Spaces",
+          //   description:
+          //     "Sustainable cities designed with green spaces, clean air initiatives, and eco-friendly infrastructure.",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function openModal(index) {
+        currentIndex = index;
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+
+        modalImage.src = images[index].src;
+        modalTitle.textContent = images[index].title;
+        modalDescription.textContent = images[index].description;
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        openModal(currentIndex);
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        openModal(currentIndex);
+      }
+
+      document.addEventListener("keydown", function (e) {
+        const modal = document.getElementById("imageModal");
+        if (modal.style.display === "flex") {
+          if (e.key === "Escape") closeModal();
+          if (e.key === "ArrowRight") nextImage();
+          if (e.key === "ArrowLeft") prevImage();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-brand {
+  color: #3498db !important;
+  font-weight: 700;
+  font-size: 28px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.1),
+    rgba(46, 204, 113, 0.1)
+  );
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  background-color: #f8f9fa;
+  border: 2px solid #3498db;
+}
+
+.nav-link {
+  color: #2c3e50 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #3498db !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #3498db;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  white-space: nowrap;
+  border: none;
+  padding: 10px 28px;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+  min-width: 130px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+  background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/air-pollution-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.title {
+  position: relative;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1s ease;
+  max-width: 900px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.layer {
+  display: none;
+}
+
+.serv-head {
+  font-weight: 700;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
+}
+
+.serv-head::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.services {
+  background: linear-gradient(180deg, #ffffff 0%, #ecf0f1 100%);
+  padding: 60px 0;
+}
+
+.sev1,
+.sev2,
+.sev3 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.services img {
+  transition: transform 0.3s ease;
+}
+
+.services img:hover {
+  transform: scale(1.05);
+}
+
+.services p {
+  color: #34495e;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 60px 0 20px 0;
+}
+
+.footer h2,
+.footer h3 {
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  color: #bdc3c7;
+  line-height: 1.6;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #3498db;
+  transform: translateY(-2px);
+}
+
+.foot {
+  background: #1a252f;
+  padding: 20px 0;
+}
+
+.foot svg {
+  transition: all 0.3s ease;
+}
+
+.foot svg:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px !important;
+  }
+
+  .navbar-brand {
+    font-size: 24px !important;
+  }
+
+  .services {
+    padding: 40px 0;
+  }
+
+  .sev1,
+  .sev2,
+  .sev3 {
+    font-size: 24px;
+  }
+
+  .row > .col-sm-12 {
+    margin-bottom: 20px;
+  }
+}
